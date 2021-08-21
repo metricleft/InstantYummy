@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/plainTextUserLoginInputEmail"
+        android:id="@+id/editTextEmail"
         android:layout_width="wrap_content"
         android:layout_height="57dp"
         android:layout_alignParentStart="true"
@@ -20,23 +20,21 @@
         android:text="Email" />
 
     <EditText
-        android:id="@+id/plainTextUserLoginPassword"
+        android:id="@+id/editTextPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/plainTextUserLoginInputEmail"
-        android:layout_alignStart="@id/plainTextUserLoginInputEmail"
+        android:layout_below="@+id/editTextEmail"
+        android:layout_alignStart="@id/editTextEmail"
         android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="92dp"
         android:layout_marginTop="46dp"
-        android:layout_marginBottom="266dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Password" />
 
     <Button
-        android:id="@+id/buttonUserLoginUserLogin"
+        android:id="@+id/buttonLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -45,7 +43,7 @@
         android:text="Log In" />
 
     <TextView
-        android:id="@+id/textViewUserLoginWelcomeMessage"
+        android:id="@+id/textViewWelcomeMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -54,7 +52,7 @@
         android:text="Welcome" />
 
     <Button
-        android:id="@+id/buttonUserLoginUserSignUp"
+        android:id="@+id/buttonSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
