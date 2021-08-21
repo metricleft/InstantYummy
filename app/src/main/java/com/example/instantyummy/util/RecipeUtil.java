@@ -3,6 +3,7 @@ package com.example.instantyummy.util;
 import com.example.instantyummy.models.Recipe;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -44,11 +45,13 @@ public class RecipeUtil {
         }
         List<Recipe> finalRecipes = new ArrayList<>();
         for (int i : recipes.keySet()) {
+            Collections.sort(recipes.get(i));
             finalRecipes.addAll(recipes.get(i));
             if (finalRecipes.size() > 50) {
                 break;
             }
         }
+        Collections.sort(finalRecipes);
         return finalRecipes;
     }
 
