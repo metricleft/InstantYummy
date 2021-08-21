@@ -13,9 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="25dp"
-        android:text="Home"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="37dp" />
+        android:text="Home" />
 
     <Button
         android:id="@+id/buttonHomeViewPantry"
@@ -24,10 +22,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="217dp"
-        android:text="Pantry"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="116dp" />
+        android:text="Pantry" />
 
     <Button
         android:id="@+id/buttonHomeViewRecipes"
@@ -36,10 +31,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="288dp"
-        android:text="Recipes"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="218dp" />
+        android:text="Recipes" />
 
     <Button
         android:id="@+id/buttonHomeViewFeaturedDishes"
@@ -48,11 +40,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="346dp"
-        android:text="Featured Dishes"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="323dp" />
-
+        android:text="Featured Dishes" />
+<!--
     <TextView
         android:id="@+id/textViewHomeViewMoreVideoFeed"
         android:layout_width="wrap_content"
@@ -62,9 +51,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="157dp"
         android:layout_marginTop="516dp"
-        android:text="View More"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="447dp" />
+        android:text="View More" />-->
 
 </RelativeLayout>

@@ -13,12 +13,10 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="31dp"
         android:layout_marginTop="21dp"
-        android:text="Sign Up"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="40dp" />
+        android:text="Sign Up"/>
 
     <EditText
-        android:id="@+id/plainTextUserSignUpInputName"
+        android:id="@+id/editTextName"
         android:layout_width="wrap_content"
         android:layout_height="56dp"
         android:layout_alignParentTop="true"
@@ -26,13 +24,10 @@
         android:layout_marginTop="109dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="136dp" />
+        android:hint="Name" />
 
     <EditText
-        android:id="@+id/plainTextUserSignUpInputEmail"
+        android:id="@+id/editTextUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -40,13 +35,10 @@
         android:layout_marginTop="187dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="237dp" />
+        android:hint="Email" />
 
     <EditText
-        android:id="@+id/plainTextUserSignUpInputPassword"
+        android:id="@+id/editTextPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -54,28 +46,10 @@
         android:layout_marginTop="271dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Password"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/plainTextSignUpUserInputConfirmPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="327dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Confirm Password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="423dp" />
+        android:hint="Password" />
 
     <Button
-        android:id="@+id/buttonUserSignUpSignUpButton"
+        android:id="@+id/buttonSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -83,21 +57,15 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="141dp"
         android:layout_marginTop="454dp"
-        android:text="Sign Up"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="526dp" />
+        android:hint="Sign Up" />
 
     <Button
-        android:id="@+id/buttonUserSignUpReturnToLogin"
+        android:id="@+id/buttonLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="109dp"
         android:layout_marginTop="526dp"
-        android:text="Back to Login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="613dp" />
+        android:hint="Back to Login" />
 </RelativeLayout>
