@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Instant Yummy</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+    <string name="back4app_app_id">bHykIPJRvjGOUVSyMGCpGE62ZIC66qKkoVDom44t</string>
+    <string name="back4app_client_key">q51kCITAiblCZQLLRYP8KSosqNNHBRARw5uA9iBo</string>
+
+</resources>
