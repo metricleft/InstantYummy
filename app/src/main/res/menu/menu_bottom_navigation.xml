@@ -2,12 +2,48 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/tasks"
+        android:id="@+id/featured"
         app:itemBackground="?attr/colorPrimary"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
         android:enabled="true"
-        android:icon="@drawable/ic_tasks"
-        android:title="@string/bottom_navigation_bar_tasks"
-        app:showAsAction="ifRoom" />
+        android:title="featured"
+        android:icon="@drawable/ic_android_black_24dp"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/pantry"
+        app:itemBackground="?attr/colorPrimary"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:enabled="true"
+        android:title="pantry"
+        android:icon="@drawable/ic_android_black_24dp"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/home"
+        app:itemBackground="?attr/colorPrimary"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:enabled="true"
+        android:title="home"
+        android:icon="@drawable/ic_android_black_24dp"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/recipes"
+        app:itemBackground="?attr/colorPrimary"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:enabled="true"
+        android:title="recipes"
+        android:icon="@drawable/ic_android_black_24dp"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/profile"
+        app:itemBackground="?attr/colorPrimary"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:enabled="true"
+        android:title="profile"
+        android:icon="@drawable/ic_android_black_24dp"
+        app:showAsAction="always" />
 </menu>

@@ -1,8 +1,0 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/textViewPointsTotal"
-        app:showAsAction="ifRoom"
-        app:actionViewClass="android.widget.TextView"
-        android:title="@string/menu_points_title" />
-</menu>

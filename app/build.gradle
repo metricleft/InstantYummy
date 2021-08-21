@@ -36,6 +36,8 @@ dependencies {
     implementation group: 'com.google.guava', name: 'guava', version: '24.1-jre'
     implementation 'androidx.navigation:navigation-fragment:2.3.5'
     implementation 'androidx.navigation:navigation-ui:2.3.5'
+    implementation 'com.opencsv:opencsv:4.6'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
 
 }
