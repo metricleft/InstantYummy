@@ -1,10 +1,10 @@
 package com.example.instantyummy.models;
 
-import java.util.List;
+import java.util.HashSet;
 
 public class Recipe implements Comparable<Recipe>{
     public String recipeName;
-    public List<String> ingredients;
+    public HashSet<String> ingredients;
 
 
     @Override
