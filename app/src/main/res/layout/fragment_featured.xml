@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textViewFeaturedMessage"
+        android:id="@+id/textViewFeaturedRecipesLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="22dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="19dp"
         android:text="Featured Recipes" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewFeaturedRecipes"
-        android:layout_width="409dp"
-        android:layout_height="678dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true" />
+        android:id="@+id/recyclerViewFeaturedRecipesList"
+        android:layout_width="391dp"
+        android:layout_height="735dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-28dp"
+        android:layout_marginBottom="-10dp" />
 </RelativeLayout>
