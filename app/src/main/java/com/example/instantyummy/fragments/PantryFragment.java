@@ -20,14 +20,16 @@ import com.example.instantyummy.adapters.IngredientAdapter;
 import com.example.instantyummy.databinding.FragmentPantryBinding;
 import com.example.instantyummy.util.RecipeData;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
+import java.util.TreeSet;
 
 public class PantryFragment extends Fragment {
 
     private FragmentPantryBinding binding;
-    private List<String> ingredients;
+    private TreeSet<String> ingredients;
     private IngredientAdapter adapter;
     private FragmentActivity fragmentActivity;
 
@@ -59,7 +61,7 @@ public class PantryFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         ingredients = RecipeData.ingredients;
-        adapter = new IngredientAdapter(getActivity(), ingredients);
+        adapter = new IngredientAdapter(getActivity(), new ArrayList<>(ingredients));
 
         binding.recyclerViewPantryItemsInPantry.setAdapter(adapter);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
@@ -82,7 +84,6 @@ public class PantryFragment extends Fragment {
             if (!ingredients.contains(ingredient)) {
                 ingredients.add(ingredient);
             }
-            Collections.sort(ingredients);
             adapter.notifyDataSetChanged();
             binding.recyclerViewPantryItemsInPantry.smoothScrollToPosition(adapter.getItemCount()-1);
         });

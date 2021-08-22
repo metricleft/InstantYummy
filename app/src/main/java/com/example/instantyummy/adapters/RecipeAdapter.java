@@ -1,4 +1,68 @@
 package com.example.instantyummy.adapters;
 
-public class RecipeAdapter {
+import android.content.Context;
+import android.content.res.Resources;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.content.res.AppCompatResources;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.instantyummy.R;
+import com.example.instantyummy.databinding.ItemIngredientBinding;
+import com.example.instantyummy.databinding.ItemRecipeBinding;
+import com.example.instantyummy.models.Recipe;
+
+import java.util.List;
+
+public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder> {
+    private Context context;
+    private List<Recipe> recipes;
+
+    public RecipeAdapter(Context context, List<Recipe> recipes) {
+        this.context = context;
+        this.recipes = recipes;
+    }
+
+    @NonNull
+    @Override
+    public RecipeAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        ItemRecipeBinding binding = ItemRecipeBinding.inflate(LayoutInflater.from(context), parent, false);
+        return new RecipeAdapter.ViewHolder(binding);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        Recipe recipe = recipes.get(position);
+        holder.bind(recipe);
+    }
+
+    @Override
+    public int getItemCount() {
+        return recipes.size();
+    }
+
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        ItemRecipeBinding binding;
+
+        public ViewHolder(@NonNull ItemRecipeBinding binding) {
+            super(binding.getRoot());
+            this.binding = binding;
+            itemView.setOnClickListener(this);
+        }
+
+        public void bind(Recipe recipe) {
+            Resources resources = context.getResources();
+            binding.imageViewRecipePhoto.setImageDrawable(AppCompatResources.getDrawable(context, resources.getIdentifier(recipe.photoFileName, "drawable", context.getPackageName())));
+            binding.textViewRecipeTitle.setText(recipe.recipeName);
+            binding.textViewIngredients.setText(recipe.ingredients.toString());
+        }
+
+        @Override
+        public void onClick(View view) {
+            //go to details screen
+        }
+    }
 }

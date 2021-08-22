@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
 
-        data = new RecipeData();
+        data = new RecipeData(MainActivity.this, user);
 
         NavHostFragment navHostFragment =
                 (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainerDisplayFragment);
