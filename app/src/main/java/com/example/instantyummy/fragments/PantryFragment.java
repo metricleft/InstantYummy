@@ -31,22 +31,16 @@ public class PantryFragment extends Fragment {
     private FragmentPantryBinding binding;
     private TreeSet<String> ingredients;
     private IngredientAdapter adapter;
-    private FragmentActivity fragmentActivity;
 
     public PantryFragment() {
         // Required empty public constructor
     }
 
-    public static PantryFragment newInstance(FragmentActivity fragmentActivity, RecipeData data) {
+    public static PantryFragment newInstance(FragmentActivity fragmentActivity) {
         PantryFragment fragment = new PantryFragment();
         Bundle args = new Bundle();
-        fragment.setActivity(fragmentActivity);
         fragment.setArguments(args);
         return fragment;
-    }
-
-    private void setActivity(FragmentActivity fragmentActivity) {
-        this.fragmentActivity = fragmentActivity;
     }
 
     @Override
@@ -60,8 +54,7 @@ public class PantryFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        ingredients = RecipeData.ingredients;
-        adapter = new IngredientAdapter(getActivity(), new ArrayList<>(ingredients));
+        adapter = new IngredientAdapter(getActivity(), new ArrayList<>(RecipeData.ingredients));
 
         binding.recyclerViewPantryItemsInPantry.setAdapter(adapter);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
@@ -70,22 +63,9 @@ public class PantryFragment extends Fragment {
         binding.buttonPantryAddIngredients.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DialogFragmentAddIngredient addIngredientFragment = DialogFragmentAddIngredient.newInstance();
-                addIngredientFragment.show(fragmentActivity.getSupportFragmentManager(), "fragment_add_ingredient");
+                DialogFragmentAddIngredient addIngredientFragment = DialogFragmentAddIngredient.newInstance(getActivity(), adapter);
+                addIngredientFragment.show(getActivity().getSupportFragmentManager(), "fragment_add_ingredient");
             }
-        });
-
-        NavController navController = NavHostFragment.findNavController(this);
-        // We use a String here, but any type that can be put in a Bundle is supported
-        MutableLiveData<String> createRewardLiveData = Objects.requireNonNull(navController.getCurrentBackStackEntry())
-                .getSavedStateHandle()
-                .getLiveData("ingredient");
-        createRewardLiveData.observe(getViewLifecycleOwner(), ingredient -> {
-            if (!ingredients.contains(ingredient)) {
-                ingredients.add(ingredient);
-            }
-            adapter.notifyDataSetChanged();
-            binding.recyclerViewPantryItemsInPantry.smoothScrollToPosition(adapter.getItemCount()-1);
         });
     }
 }
