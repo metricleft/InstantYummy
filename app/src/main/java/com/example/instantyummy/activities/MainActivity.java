@@ -10,6 +10,7 @@ import android.os.Bundle;
 import com.example.instantyummy.R;
 import com.example.instantyummy.databinding.ActivityMainBinding;
 import com.example.instantyummy.models.YummyUser;
+import com.example.instantyummy.util.RecipeData;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.ParseUser;
 
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private NavController navController;
     private int selectedItem;
+    public RecipeData data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
+
+        data = new RecipeData(MainActivity.this, user);
 
         NavHostFragment navHostFragment =
                 (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainerDisplayFragment);

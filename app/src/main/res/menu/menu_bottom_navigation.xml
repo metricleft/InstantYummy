@@ -8,7 +8,7 @@
         app:itemTextColor="@color/white"
         android:enabled="true"
         android:title="featured"
-        android:icon="@drawable/ic_android_black_24dp"
+        android:icon="@drawable/ic_featured"
         app:showAsAction="always" />
     <item
         android:id="@+id/pantry"
@@ -17,7 +17,7 @@
         app:itemTextColor="@color/white"
         android:enabled="true"
         android:title="pantry"
-        android:icon="@drawable/ic_android_black_24dp"
+        android:icon="@drawable/ic_pantry"
         app:showAsAction="always" />
     <item
         android:id="@+id/home"
@@ -26,7 +26,7 @@
         app:itemTextColor="@color/white"
         android:enabled="true"
         android:title="home"
-        android:icon="@drawable/ic_android_black_24dp"
+        android:icon="@drawable/ic_home"
         app:showAsAction="always" />
     <item
         android:id="@+id/recipes"
@@ -35,7 +35,7 @@
         app:itemTextColor="@color/white"
         android:enabled="true"
         android:title="recipes"
-        android:icon="@drawable/ic_android_black_24dp"
+        android:icon="@drawable/ic_recipe"
         app:showAsAction="always" />
     <item
         android:id="@+id/profile"
@@ -44,6 +44,6 @@
         app:itemTextColor="@color/white"
         android:enabled="true"
         android:title="profile"
-        android:icon="@drawable/ic_android_black_24dp"
+        android:icon="@drawable/ic_profile"
         app:showAsAction="always" />
 </menu>

@@ -10,9 +10,11 @@ import java.util.List;
 public class Recipe implements Comparable<Recipe>{
     public String recipeName;
     public HashSet<String> ingredients;
-    //public List<String> cookingInstruments;
+    public String photoFileName;
+    public HashSet<String> displayIngredients;
+    public String instructions;
 
-    public Recipe(JSONObject recipe) {
+    /*public Recipe(JSONObject recipe) {
         try {
             this.recipeName = recipe.getString("title");
             this.ingredients = new HashSet<>((List<String>) recipe.getJSONArray("ingredients"));
@@ -20,7 +22,16 @@ public class Recipe implements Comparable<Recipe>{
         catch (JSONException e) {
             e.printStackTrace();
         }
+        photoFileName = recipe.getString("photo");
         //cookingInstruments = new ArrayList<>();
+    }*/
+
+    public Recipe() {
+        recipeName = "";
+        ingredients = new HashSet<>();
+        displayIngredients = new HashSet<>();
+        photoFileName = "";
+        instructions = "";
     }
 
     @Override
