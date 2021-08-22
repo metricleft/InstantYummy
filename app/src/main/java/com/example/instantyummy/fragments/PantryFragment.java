@@ -14,6 +14,7 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.instantyummy.activities.MainActivity;
 import com.example.instantyummy.adapters.IngredientAdapter;
@@ -29,7 +30,6 @@ import java.util.TreeSet;
 public class PantryFragment extends Fragment {
 
     private FragmentPantryBinding binding;
-    private TreeSet<String> ingredients;
     private IngredientAdapter adapter;
 
     public PantryFragment() {
@@ -65,6 +65,14 @@ public class PantryFragment extends Fragment {
             public void onClick(View view) {
                 DialogFragmentAddIngredient addIngredientFragment = DialogFragmentAddIngredient.newInstance(getActivity(), adapter);
                 addIngredientFragment.show(getActivity().getSupportFragmentManager(), "fragment_add_ingredient");
+            }
+        });
+
+        binding.swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                adapter.notifyDataSetChanged();
+                binding.swipeRefreshLayout.setRefreshing(false);
             }
         });
     }

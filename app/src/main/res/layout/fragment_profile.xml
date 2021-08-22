@@ -52,6 +52,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="27dp"
+        android:checked="true"
         android:text="Show Recipes With Partial Ingredient Matches" />
 
     <Switch

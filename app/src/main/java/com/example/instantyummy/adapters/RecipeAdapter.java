@@ -28,6 +28,10 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
         this.recipes = recipes;
     }
 
+    public void setRecipes(List<Recipe> recipes) {
+        this.recipes = recipes;
+    }
+
     @NonNull
     @Override
     public RecipeAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -59,7 +63,14 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
             Resources resources = fragmentActivity.getResources();
             binding.imageViewRecipePhoto.setImageDrawable(AppCompatResources.getDrawable(fragmentActivity, resources.getIdentifier(recipe.photoFileName, "drawable", fragmentActivity.getPackageName())));
             binding.textViewRecipeTitle.setText(recipe.recipeName);
-            binding.textViewIngredients.setText(recipe.ingredients.toString());
+            String ingredients = "";
+            for (String ingredient : recipe.ingredients) {
+                ingredients += ingredient + ", ";
+            }
+            if (!ingredients.isEmpty()) {
+                ingredients = ingredients.substring(0, ingredients.length()-2);
+            }
+            binding.textViewIngredients.setText(ingredients);
         }
 
         @Override

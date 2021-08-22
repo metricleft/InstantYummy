@@ -18,9 +18,9 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
-    private NavController navController;
-    private int selectedItem;
+    public ActivityMainBinding binding;
+    public NavController navController;
+    public int selectedItem;
     public RecipeData data;
 
     @Override

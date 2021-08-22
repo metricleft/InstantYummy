@@ -11,7 +11,7 @@ import java.util.TreeMap;
 
 public class RecipeUtil {
 
-    public List<Recipe> getExactRecipes(HashSet<String> ingredients) {
+    public static List<Recipe> getExactRecipes(HashSet<String> ingredients) {
         List<Recipe> recipes = new ArrayList<>();
         for (Recipe recipe : RecipeData.allRecipes) {
             if (recipe.ingredients.equals(ingredients)) {
@@ -21,7 +21,7 @@ public class RecipeUtil {
         return recipes;
     }
 
-    public List<Recipe> getPartialRecipes(HashSet<String> ingredients) {
+    public static List<Recipe> getPartialRecipes(HashSet<String> ingredients) {
         //assign every ingredient a "common" number
         //so basically spices and seasoning and stuff will have LOW common numbers
         //and obscure stuff like "horseradish" will have HIGH common numbers
@@ -55,7 +55,7 @@ public class RecipeUtil {
         return finalRecipes;
     }
 
-    private int sumCommonValues(HashSet<String> ingredients) {
+    private static int sumCommonValues(HashSet<String> ingredients) {
         int commonValueSum = 0;
         for (String ingredient : ingredients) {
             commonValueSum += RecipeData.commonValues.get(ingredient);

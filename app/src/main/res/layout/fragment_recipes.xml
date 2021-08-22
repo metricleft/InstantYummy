@@ -17,13 +17,18 @@
         tools:layout_editor_absoluteX="25dp"
         tools:layout_editor_absoluteY="42dp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewUserAvailableRecipesListBasedOnPantry"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/textViewRecipesLabel"
-        android:layout_alignStart="@+id/textViewRecipesLabel"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="30dp" />
+        android:layout_alignStart="@+id/textViewRecipesLabel">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewUserAvailableRecipesListBasedOnPantry"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="30dp" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </RelativeLayout>

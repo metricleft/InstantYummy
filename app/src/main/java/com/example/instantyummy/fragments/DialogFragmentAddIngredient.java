@@ -20,6 +20,7 @@ import com.example.instantyummy.adapters.IngredientAdapter;
 import com.example.instantyummy.databinding.FragmentAddIngredientsBinding;
 import com.example.instantyummy.util.RecipeData;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class DialogFragmentAddIngredient extends DialogFragment {
@@ -77,8 +78,9 @@ public class DialogFragmentAddIngredient extends DialogFragment {
                     return;
                 }
                 RecipeData.ingredients.add(ingredient);
+                adapter.setIngredients(new ArrayList<>(RecipeData.ingredients));
                 adapter.notifyDataSetChanged();
-                Log.i("DialogFragmentAddIngredient", RecipeData.ingredients.toString());
+                Log.i("DialogFragmentAdd", RecipeData.ingredients.toString());
                 dismiss();
             }
         });

@@ -1,5 +1,6 @@
 package com.example.instantyummy.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +10,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.instantyummy.activities.LoginActivity;
 import com.example.instantyummy.databinding.FragmentProfileBinding;
+import com.example.instantyummy.models.YummyUser;
+import com.parse.ParseUser;
 
 public class ProfileFragment extends Fragment {
 
@@ -37,5 +41,19 @@ public class ProfileFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        YummyUser user = (YummyUser) ParseUser.getCurrentUser();
+
+        binding.buttonUserProfileLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ParseUser.logOut();
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
+                requireActivity().finish();
+            }
+        });
+
+        binding.textViewUserProfileUserEmail.setText(user.getUsername());
+        binding.textViewUserProfileUserName.setText("@" + user.getName());
     }
 }

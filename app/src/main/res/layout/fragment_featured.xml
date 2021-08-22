@@ -15,14 +15,19 @@
         android:text="Featured Recipes"
         android:textSize="24sp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewFeaturedRecipesList"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/textViewFeaturedRecipesLabel"
-        android:layout_alignStart="@+id/textViewFeaturedRecipesLabel"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="30dp" />
+        android:layout_alignStart="@+id/textViewFeaturedRecipesLabel">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewFeaturedRecipesList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="30dp" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </RelativeLayout>

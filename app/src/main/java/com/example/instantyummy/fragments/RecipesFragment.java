@@ -9,13 +9,16 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.instantyummy.adapters.IngredientAdapter;
 import com.example.instantyummy.adapters.RecipeAdapter;
 import com.example.instantyummy.databinding.FragmentRecipesBinding;
 import com.example.instantyummy.models.Recipe;
 import com.example.instantyummy.util.RecipeData;
+import com.example.instantyummy.util.RecipeUtil;
 
+import java.util.HashSet;
 import java.util.List;
 
 public class RecipesFragment extends Fragment {
@@ -46,11 +49,21 @@ public class RecipesFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        recipes = RecipeData.allRecipes;
+        recipes = RecipeUtil.getPartialRecipes(new HashSet<>(RecipeData.ingredients));
         adapter = new RecipeAdapter(getActivity(), recipes);
 
         binding.recyclerViewUserAvailableRecipesListBasedOnPantry.setAdapter(adapter);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         binding.recyclerViewUserAvailableRecipesListBasedOnPantry.setLayoutManager(linearLayoutManager);
+
+        binding.swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                /*recipes.clear();
+                recipes.addAll(RecipeUtil.getPartialRecipes(new HashSet<>(RecipeData.ingredients)));*/
+                adapter.notifyDataSetChanged();
+                binding.swipeRefreshLayout.setRefreshing(false);
+            }
+        });
     }
 }

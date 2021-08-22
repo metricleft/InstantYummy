@@ -21,6 +21,10 @@ public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter.Vi
         this.ingredients = ingredients;
     }
 
+    public void setIngredients(List<String> ingredients) {
+        this.ingredients = ingredients;
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
