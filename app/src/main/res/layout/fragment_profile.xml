@@ -11,96 +11,93 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="36dp"
-        android:text="Profile" />
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Profile"
+        android:textSize="24sp" />
 
     <ImageView
         android:id="@+id/imageViewUserProfileImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/textViewProfileUserProfileLabel"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="87dp"
+        android:layout_marginTop="30dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/textViewUserProfileUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/imageViewUserProfileImage"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="252dp"
+        android:layout_marginTop="30dp"
         android:text="[user's name]" />
 
     <TextView
         android:id="@+id/textViewUserProfileUserEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/textViewUserProfileUserName"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="294dp"
+        android:layout_marginTop="30dp"
         android:text="[email here]" />
 
     <Switch
         android:id="@+id/switchUserProfileToggleAllowPartialIngredientRecipeMatches"
-        android:layout_width="348dp"
+        android:layout_width="360dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/switchUserProfileToggleVegan"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="359dp"
-        android:layout_marginEnd="21dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="27dp"
         android:text="Show Recipes With Partial Ingredient Matches" />
 
     <Switch
         android:id="@+id/switchUserProfileToggleVegetarian"
-        android:layout_width="wrap_content"
+        android:layout_width="360dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/textViewUserProfileUserEmail"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="370dp"
+        android:layout_marginTop="30dp"
         android:text="Show Vegetarian Options Only" />
 
     <Switch
         android:id="@+id/switchUserProfileToggleVegan"
-        android:layout_width="wrap_content"
+        android:layout_width="360dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/switchUserProfileToggleVegetarian"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="94dp"
-        android:layout_marginBottom="321dp"
+        android:layout_marginTop="15dp"
         android:text="Show Vegan Options Only" />
 
     <Button
         android:id="@+id/buttonUserProfileLogOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/spinnerUserProfileSelectPreferredCuisine"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="143dp"
-        android:layout_marginBottom="86dp"
+        android:layout_marginTop="60dp"
         android:text="Log Out" />
 
     <Spinner
         android:id="@+id/spinnerUserProfileSelectPreferredCuisine"
-        android:layout_width="327dp"
+        android:layout_width="360dp"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewUserProfileSelectSortCuisineLabel"
         android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="35dp"
-        android:layout_marginBottom="197dp" />
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp" />
 
     <TextView
         android:id="@+id/textViewUserProfileSelectSortCuisineLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/switchUserProfileToggleAllowPartialIngredientRecipeMatches"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="237dp"
+        android:layout_marginTop="30dp"
         android:text="Select a Preferred Cuisine:" />
 
 </RelativeLayout>

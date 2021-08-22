@@ -10,9 +10,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
         android:text="Pantry"
+        android:textSize="24sp"
         tools:layout_editor_absoluteX="39dp"
         tools:layout_editor_absoluteY="35dp" />
 
@@ -20,30 +21,31 @@
         android:id="@+id/recyclerViewPantryItemsInPantry"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="66dp" />
+        android:layout_below="@+id/textViewPantryPantryLabel"
+        android:layout_alignStart="@+id/textViewPantryPantryLabel"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="30dp" />
 
     <Button
         android:id="@+id/buttonPantryEditPantry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewPantryPantryLabel"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="163dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginEnd="30dp"
         android:text="Edit Pantry" />
 
     <Button
         android:id="@+id/buttonPantryAddIngredients"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonPantryEditPantry"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="38dp"
-        android:layout_marginBottom="98dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
         android:text="Add Ingredients" />
 
 </RelativeLayout>

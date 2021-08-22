@@ -10,16 +10,19 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="19dp"
-        android:text="Featured Recipes" />
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Featured Recipes"
+        android:textSize="24sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewFeaturedRecipesList"
-        android:layout_width="391dp"
-        android:layout_height="735dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textViewFeaturedRecipesLabel"
+        android:layout_alignStart="@+id/textViewFeaturedRecipesLabel"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="-28dp"
-        android:layout_marginBottom="-10dp" />
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="30dp" />
 </RelativeLayout>
