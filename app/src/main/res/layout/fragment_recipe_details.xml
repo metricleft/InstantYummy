@@ -32,8 +32,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="143dp"
-        android:layout_marginTop="227dp"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        android:layout_marginTop="227dp" />
 
     <TextView
         android:id="@+id/textViewRecipeDetailsIngredientsHeader"
