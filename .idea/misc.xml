@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/InstantYummy/app/src/main/res/layout/activity_login.xml" value="0.1935185185185185" />
+        <entry key="..\:/Users/User/InstantYummy/app/src/main/res/layout/activity_main.xml" value="0.19444444444444445" />
+        <entry key="..\:/Users/User/InstantYummy/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Users/User/InstantYummy/app/src/main/res/layout/fragment_pantry.xml" value="0.1935185185185185" />
         <entry key="..\:/Users/mckee11223/AndroidStudioProjects/InstantYummy/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/mckee11223/AndroidStudioProjects/InstantYummy/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/mckee11223/AndroidStudioProjects/InstantYummy/app/src/main/res/layout/activity_add_ingredients.xml" value="0.22" />
