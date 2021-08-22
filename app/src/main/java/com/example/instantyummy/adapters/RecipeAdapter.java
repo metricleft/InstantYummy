@@ -8,28 +8,30 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.content.res.AppCompatResources;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.instantyummy.R;
 import com.example.instantyummy.databinding.ItemIngredientBinding;
 import com.example.instantyummy.databinding.ItemRecipeBinding;
+import com.example.instantyummy.fragments.DialogFragmentRecipeDetails;
 import com.example.instantyummy.models.Recipe;
 
 import java.util.List;
 
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder> {
-    private Context context;
     private List<Recipe> recipes;
+    private FragmentActivity fragmentActivity;
 
-    public RecipeAdapter(Context context, List<Recipe> recipes) {
-        this.context = context;
+    public RecipeAdapter(FragmentActivity fragmentActivity, List<Recipe> recipes) {
+        this.fragmentActivity = fragmentActivity;
         this.recipes = recipes;
     }
 
     @NonNull
     @Override
     public RecipeAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        ItemRecipeBinding binding = ItemRecipeBinding.inflate(LayoutInflater.from(context), parent, false);
+        ItemRecipeBinding binding = ItemRecipeBinding.inflate(LayoutInflater.from(fragmentActivity), parent, false);
         return new RecipeAdapter.ViewHolder(binding);
     }
 
@@ -54,15 +56,16 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
         }
 
         public void bind(Recipe recipe) {
-            Resources resources = context.getResources();
-            binding.imageViewRecipePhoto.setImageDrawable(AppCompatResources.getDrawable(context, resources.getIdentifier(recipe.photoFileName, "drawable", context.getPackageName())));
+            Resources resources = fragmentActivity.getResources();
+            binding.imageViewRecipePhoto.setImageDrawable(AppCompatResources.getDrawable(fragmentActivity, resources.getIdentifier(recipe.photoFileName, "drawable", fragmentActivity.getPackageName())));
             binding.textViewRecipeTitle.setText(recipe.recipeName);
             binding.textViewIngredients.setText(recipe.ingredients.toString());
         }
 
         @Override
         public void onClick(View view) {
-            //go to details screen
+            DialogFragmentRecipeDetails recipeDetailsFragment = DialogFragmentRecipeDetails.newInstance(fragmentActivity, recipes.get(getAdapterPosition()));
+            recipeDetailsFragment.show(fragmentActivity.getSupportFragmentManager(), "fragment_recipe_details");
         }
     }
 }

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/imageViewRecipePhoto"
@@ -28,7 +28,8 @@
         android:id="@+id/textViewIngredients"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/textViewRecipeTitle"
-        tools:layout_editor_absoluteX="192dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageViewRecipePhoto"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRecipeTitle" />
 </androidx.constraintlayout.widget.ConstraintLayout>

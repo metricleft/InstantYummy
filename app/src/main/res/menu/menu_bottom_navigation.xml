@@ -9,7 +9,7 @@
         android:enabled="true"
         android:title="featured"
         app:labelVisibilityMode="labeled"
-        android:icon="@drawable/ic_android_black_24dp"
+        android:icon="@drawable/ic_featured"
         app:showAsAction="always" />
     <item
         android:id="@+id/pantry"
@@ -19,7 +19,7 @@
         android:enabled="true"
         android:title="pantry"
         app:labelVisibilityMode="labeled"
-        android:icon="@drawable/ic_android_black_24dp"
+        android:icon="@drawable/ic_pantry"
         app:showAsAction="always" />
     <item
         android:id="@+id/home"
@@ -29,7 +29,7 @@
         android:enabled="true"
         android:title="home"
         app:labelVisibilityMode="labeled"
-        android:icon="@drawable/ic_android_black_24dp"
+        android:icon="@drawable/ic_home"
         app:showAsAction="always" />
     <item
         android:id="@+id/recipes"
@@ -39,7 +39,7 @@
         android:enabled="true"
         android:title="recipes"
         app:labelVisibilityMode="labeled"
-        android:icon="@drawable/ic_android_black_24dp"
+        android:icon="@drawable/ic_recipe"
         app:showAsAction="always" />
     <item
         android:id="@+id/profile"
@@ -49,6 +49,6 @@
         android:enabled="true"
         android:title="profile"
         app:labelVisibilityMode="labeled"
-        android:icon="@drawable/ic_android_black_24dp"
+        android:icon="@drawable/ic_profile"
         app:showAsAction="always" />
 </menu>

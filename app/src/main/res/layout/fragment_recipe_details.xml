@@ -5,23 +5,12 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textViewRecipeDetailsViewRecipeLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:text="View Recipe"
-        android:textSize="24sp" />
-
-    <TextView
         android:id="@+id/textViewRecipeDetailsRecipeTitleLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewRecipeDetailsViewRecipeLabel"
         android:layout_alignStart="@+id/textViewRecipeDetailsViewRecipeLabel"
-        android:layout_marginStart="0dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
         android:text="[Title here]"
         android:textSize="20sp" />
@@ -66,6 +55,19 @@
         android:layout_alignStart="@+id/textViewRecipeDetailsPreparationHeader"
         android:layout_marginStart="0dp"
         android:layout_marginTop="15dp"
+        android:ellipsize="none"
+        android:maxLines="100"
+        android:scrollHorizontally="false"
         android:text="[list of preparation steps]" />
+
+    <ImageView
+        android:id="@+id/imageViewRecipePhoto"
+        android:layout_width="172dp"
+        android:layout_height="96dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:srcCompat="@drawable/a101_whaler_fish_sandwich_239757" />
 
 </RelativeLayout>

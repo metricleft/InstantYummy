@@ -53,11 +53,11 @@ public class RecipeData {
                 s = input.readLine();
                 recipe.photoFileName = s;
                 s = input.readLine();
-                List<String> curIngredients = Arrays.asList(s.split(","));
+                List<String> curIngredients = Arrays.asList(s.split(", "));
                 allIngredients.addAll(curIngredients);
                 recipe.ingredients = new HashSet<>(curIngredients);
                 s = input.readLine();
-                recipe.displayIngredients = new HashSet<>(Arrays.asList(s.split(",")));
+                recipe.displayIngredients = new HashSet<>(Arrays.asList(s.split(", ")));
                 s = input.readLine();
                 recipe.instructions = s;
                 allRecipes.add(recipe);
